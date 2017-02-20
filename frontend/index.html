@@ -23,7 +23,7 @@
                 <button ng-click="keywordQuery('iphone')">iPhone</button>
             </td>
         </table>
-            {{data.length}} {{keyword}} adds in market database.
+            {{data.length}} {{keyword}} fields in database.
             <input type="search" ng-model="q" placeholder="filter adds..." aria-label="filter adds" />
              <ul class="example-animate-container">
                 <li class="animate-repeat" ng-repeat="add in data | filter:q as results">
