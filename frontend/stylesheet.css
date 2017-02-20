@@ -1,0 +1,24 @@
+body{
+    background-color: #000000;
+    color: #20fa40;
+}
+button{
+    color: white;
+    background-color: black;
+    border-radius: 25px;
+    padding: 10px;
+    width: 100px;
+    height: 80px;
+    margin: 20px;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+}
+

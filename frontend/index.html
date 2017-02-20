@@ -1,0 +1,38 @@
+<!doctype html> 
+<html ng-app="xshop">
+    <head>
+        <title>xshop</title>
+        <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="./xshop.js"></script>
+    </head>  
+
+    <body>
+        <div ng-controller="getByKeyword">
+        <table>
+            <td>
+                <button ng-click="keywordQuery('macbook')" ng-init="keywordQuery('macbook')">Macbook</button>
+            </td>
+            <td>
+                <button ng-click="keywordQuery('thinkpad')">Thinkpad</button>
+            </td>
+            <td>
+                <button ng-click="keywordQuery('ipad')">iPad</button>
+            </td>
+            <td>
+                <button ng-click="keywordQuery('iphone')">iPhone</button>
+            </td>
+        </table>
+            {{data.length}} {{keyword}} adds in market database.
+            <input type="search" ng-model="q" placeholder="filter adds..." aria-label="filter adds" />
+             <ul class="example-animate-container">
+                <li class="animate-repeat" ng-repeat="add in data | filter:q as results">
+                <a href={{add.url}}>{{add.tdate}} - {{add.name}} - price {{add.price}} euros</a>
+                </li>
+                <li class="animate-repeat" ng-if="results.length === 0">
+                    <strong>No results found...</strong>
+                </li>
+             </ul>
+        </div>
+    </body>
+</html>    
